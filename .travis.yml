@@ -10,4 +10,4 @@ script:
   - nyc --reporter=html --reporter=text mocha ./tests/*.js
 
 after_success:
-  - coveralls
+  - nyc report --reporter=text-lcov | coveralls

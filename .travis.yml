@@ -7,7 +7,7 @@ install:
   - npm install
 
 script:
-  - nyc report --reporter=text-lcov | coveralls
+  - nyc --reporter=html --reporter=text mocha ./tests/*.js
 
 after_success:
   - coveralls
